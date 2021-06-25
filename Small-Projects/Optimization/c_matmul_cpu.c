@@ -4,7 +4,11 @@
 #define N 500
 
 
+<<<<<<< HEAD
 double main()
+=======
+int main()
+>>>>>>> b7502a25f790a03fee000273004ab0799f19d827
 {
 	//Allocating the arrays on the heap to avoid stack overflows
 	int i, j, k;
@@ -40,14 +44,24 @@ double main()
 	t = clock() - t;
 
 	double time_taken = ((double)t) / CLOCKS_PER_SEC;
+<<<<<<< HEAD
+=======
+	printf("%f\n", time_taken);
+>>>>>>> b7502a25f790a03fee000273004ab0799f19d827
 
 	for (i = 0; i < N; i++) {
 		free(A[i]);
 		free(B[i]);
 		free(C[i]);
 	}
+<<<<<<< HEAD
 
 	printf("%f", time_taken);
 	return 0; //This one is in seconds
 
 }
+=======
+	return 0;
+
+}
+>>>>>>> b7502a25f790a03fee000273004ab0799f19d827
