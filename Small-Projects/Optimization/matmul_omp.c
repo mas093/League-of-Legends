@@ -5,7 +5,7 @@
 #include <omp.h>
 #define N 500
 
-int main(void)
+double main(void)
 {
 	int i, j, k;
 	int* A[N];
@@ -64,6 +64,6 @@ int main(void)
 		}
 	}
 	t = t2 - t1;
-	printf("time %f\n", t);
-	return 0;
+	printf("%f", t);
+	return 0;	//This one is in seconds
 }

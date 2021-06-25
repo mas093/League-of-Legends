@@ -61,7 +61,6 @@ int main()
 
 	//d_C.get(&h_C[0], SIZE); Copy back does not work for large N
 
-
-	cout << milliseconds << "ms" << endl;
-	return 0;
+	cout << milliseconds << endl;
+	return 0;	//This one is in milliseconds
 }
