@@ -8,7 +8,7 @@ Cassiopeia is a python wrapper of the Riot Games API.  I enjoy following the Lea
 
 ## Optimization
 
-This project is a result of my computer architecture class in college. In that class we talked extensively about techniques to increase the efficiency of a program through numerous techniques.  In order to demonstrate what I learned about this I am currently creating a small demonstration comparing the speed of a 500X500 matrix multiplication.  The final code will run a 500X500 multiplication on random numbers multiple times and compare the average time of four approaches.
+This project is a result of my computer architecture class in college. In that class we talked extensively about techniques to increase the efficiency of a program through numerous techniques.  In order to demonstrate what I learned about this I have created a small demonstration comparing the speed of a 500X500 matrix multiplication.  The demonstration uses four different software methods to calculate the multiplication with incredibly different results.
 1.) Standard python implementation
 2.) Standard C implemenation
 3.) Multithreaded C implemenation

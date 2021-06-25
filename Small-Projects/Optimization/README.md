@@ -1,0 +1,11 @@
+# Optimization
+This project is made up of five major parts.  A python implemenation, a standard C implemenation, a multithreaded C implemenation, and a CUDA optimized C++ implemenation, and an analysis.  
+
+### Standard C and Python
+The standard C and Python perform the matrix multiplication by calculating each element of the result matrix individually in a nested loop.  This is an obviously inefficient solution for large matrices and the 20 second average Python runtime really highlights this. Python is not fully optimized to perform calculations on sets like this and can be optimized by storing the data in a different way.  Luckily C allows me to manually allocate my matrices which speeds the process up.  As a result performing the same process on the matrices in C resulted in an average runtime of only 0.4 seconds, or 400 milliseconds.  The C solution can calculate 50 multiplications in the time it takes the Python solution to calculate one.  This is very good, but writing a multithread solution is not much more difficult and can provide another large speedup. Using the openmp library in C I created a solution which distributes each multiplication amoung threads on the CPU.  
+
+### Multithreading C
+This approach gave a mean runtime of .08125 seconds, or 81.25 milliseconds.  Multithreaded C can perform 246 multiplications in the time Python performs one and five calculations per C calculation.  Multithreading is reasonably fast on the CPU, but in recent years GPU computing has become very powerful and all NVIDIA GPU's come with CUDA capailities.  
+
+### CUDA
+Using the CUDA cores on my machine I coded a simple CUDA solution for the matrix multiply. Using CUDA with 512 threads per block I can calculate one row of the matrix at the same time on a single block. I used (1x1) for my blocks per grid but with full optimization of my CUDA resources I may be able to calculate a larger percent of the matrix at once.  Even still with the 512 blocks per grid I produced a 500x500 matrix multiply in only 0.000052 seconds, or 0.05266 milliseconds.  For reference a standard camera flash takes 50X longer than this calculation.  Calculating 50 of these multiplications with python would take 16.5 minutes, while calculating 50 multiplications with CUDA takes one camera flash.
