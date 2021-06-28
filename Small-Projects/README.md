@@ -14,4 +14,8 @@ This project is a result of my computer architecture class in college. In that c
 3.) Multithreaded C implemenation
 4.) GPU optimized (Cuda)
 
+## Reliable Transfer
+
+This project was a result of my computer networking class.  The aim of the project is to build a file transfer protocol with a high degree of reliability.  For example, TCP is widely used due to its dependability and robust handling of packet loss and out of order sends.  The protocol is built on UDP and creates reliability through Acknowledgements and Sequence numbers.  The protocol is tested in different condiditions (excellent, good, poor, terrible, etc.)
+
 ## More projects and demonstrations to come!
